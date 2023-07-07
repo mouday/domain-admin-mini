@@ -55,6 +55,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-3080720230703001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-3080720230703001",
     "js-cookie": "^3.0.5",
+    "mockjs": "^1.1.0",
     "vant": "^4.6.1",
     "vue": "^3.2.45",
     "vue-i18n": "^9.1.9"

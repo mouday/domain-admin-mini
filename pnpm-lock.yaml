@@ -20,6 +20,7 @@ specifiers:
   '@dcloudio/uni-stacktracey': 3.0.0-3080720230703001
   '@dcloudio/vite-plugin-uni': 3.0.0-3080720230703001
   js-cookie: ^3.0.5
+  mockjs: ^1.1.0
   prettier: ^3.0.0
   unplugin-vue-components: ^0.25.1
   vant: ^4.6.1
@@ -42,6 +43,7 @@ dependencies:
   '@dcloudio/uni-mp-weixin': 3.0.0-3080720230703001_vue@3.3.4
   '@dcloudio/uni-quickapp-webview': 3.0.0-3080720230703001_vue@3.3.4
   js-cookie: 3.0.5
+  mockjs: 1.1.0
   vant: 4.6.1_vue@3.3.4
   vue: 3.3.4
   vue-i18n: 9.2.2_vue@3.3.4
@@ -3191,7 +3193,6 @@ packages:
 
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
-    dev: true
 
   /compare-versions/3.6.0:
     resolution: {integrity: sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==}
@@ -3900,6 +3901,13 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.8
+    dev: false
+
+  /mockjs/1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==}
+    hasBin: true
+    dependencies:
+      commander: 2.20.3
     dev: false
 
   /module-alias/2.2.3:
