@@ -1,7 +1,10 @@
 # 自动发布
 # https://github.com/marketplace/actions/deploy-to-github-pages
 
-name: Build and Deploy
+name: Build and Preview
+
+permissions:
+  contents: write
 
 on:
   push:
