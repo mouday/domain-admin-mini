@@ -1,0 +1,76 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    // {
+    //   "path": "pages/index/index",
+    //   "style": {
+    //     "navigationBarTitleText": "Domain Admin"
+    //   }
+    // },
+    {
+      "path": "pages/cert-list/cert-list",
+      "style": {
+        "navigationBarTitleText": "证书列表",
+		"navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/domain-list/domain-list",
+      "style": {
+        "navigationBarTitleText": "域名列表",
+		"navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/user-index/user-index",
+      "style": {
+        "navigationBarTitleText": "用户中心"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    }
+  ],
+
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Domain Admin",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+
+//   "tabBar": {
+//     "color": "#aaaaaa",
+//     "selectedColor": "#002fa7",
+//     "borderStyle": "black",
+//     "list": [
+//       {
+//         "pagePath": "pages/index/index",
+//         "text": "首页",
+//         "iconPath": "static/tab-icon/home.png",
+//         "selectedIconPath": "static/tab-icon/home-active.png"
+//       },
+//       {
+//         "pagePath": "pages/cert-list/cert-list",
+//         "text": "证书",
+//         "iconPath": "static/tab-icon/home.png",
+//         "selectedIconPath": "static/tab-icon/home-active.png"
+//       },
+//       {
+//         "pagePath": "pages/domain-list/domain-list",
+//         "text": "域名",
+//         "iconPath": "static/tab-icon/home.png",
+//         "selectedIconPath": "static/tab-icon/home-active.png"
+//       },
+//       {
+//         "pagePath": "pages/user-index/user-index",
+//         "text": "我的",
+//         "iconPath": "static/tab-icon/self.png",
+//         "selectedIconPath": "static/tab-icon/self-active.png"
+//       }
+//     ]
+//   }
+}
