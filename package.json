@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "npm run dev:h5",
     "build": "npm run build:h5",
+    "build:preview": "npm run build:h5 --mode preview-pro",
     "dev:app": "uni -p app",
     "dev:app-android": "uni -p app-android",
     "dev:app-ios": "uni -p app-ios",
