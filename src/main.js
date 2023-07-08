@@ -4,6 +4,8 @@ import { Http } from './api/index.js'
 import SingleMessage from './utils/message-util.js'
 import { Router } from './utils/router-util.js'
 
+console.log('VITE_MODE', import.meta.env.VITE_MODE);
+
 export function createApp() {
   const app = createSSRApp(App)
 

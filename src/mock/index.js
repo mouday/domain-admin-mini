@@ -25,4 +25,5 @@ export function useMock() {
     map[config.url] = config.data
     // Mock.mock(config.url, config.data)
   }
+  return map
 }
