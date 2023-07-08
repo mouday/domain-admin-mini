@@ -1,0 +1,1 @@
+import{o,d as t,v as e}from"./index-1435ec9f.js";import{_ as a}from"./plugin-vueexport-helper.1b428a4d.js";const s=a({data:()=>({title:"Hello"}),onLoad(){},methods:{}},[["render",function(a,s,n,r,d,c){const l=e;return o(),t(l,{class:"content"})}],["__scopeId","data-v-2c19d2fa"]]);export{s as default};
