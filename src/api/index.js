@@ -5,6 +5,7 @@ import { asyncRequest } from '../utils/request-util.js'
 import { useMock } from '../mock/index.js'
 
 export const VITE_APP_API = import.meta.env.VITE_APP_API
+const VITE_MODE = import.meta.env.VITE_MODE
 
 const mock = useMock()
 
@@ -17,7 +18,7 @@ function httpRequest(url) {
     let res = null
 
     // 使用虚拟数据
-    if (import.meta.env.VITE_MODE == 'preview') {
+    if (VITE_MODE == 'preview') {
       res = mock[url]
     } else {
       res = await asyncRequest({
