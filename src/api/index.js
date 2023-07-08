@@ -2,8 +2,11 @@ import DATA_API from './dataApi.js'
 
 import { getToken } from '../utils/token-util/index.js'
 import { asyncRequest } from '../utils/request-util.js'
+import { useMock } from '../mock/index.js'
 
 export const VITE_APP_API = import.meta.env.VITE_APP_API
+
+const mock = useMock()
 
 function httpRequest(url) {
   return async function (params = {}, config) {
@@ -11,12 +14,19 @@ function httpRequest(url) {
       'X-Token': getToken(),
     }
 
-    const res = await asyncRequest({
-      url: VITE_APP_API + url,
-      method: 'POST',
-      header: header,
-      data: params || {},
-    })
+    let res = null
+
+    // 使用虚拟数据
+    if (import.meta.env.VITE_MODE == 'preview') {
+      res = mock[url]
+    } else {
+      res = await asyncRequest({
+        url: VITE_APP_API + url,
+        method: 'POST',
+        header: header,
+        data: params || {},
+      })
+    }
 
     if (res && res.code == 0) {
       res.ok = true
