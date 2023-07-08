@@ -2,6 +2,7 @@ import Mock from 'mockjs'
 
 // 导入所有文件
 const files = import.meta.globEager('./api/*.json')
+const VITE_BASE_URL = import.meta.env.VITE_BASE_URL
 
 const mockApiConfigs = []
 
@@ -9,7 +10,7 @@ for (let fileName in files) {
   const result = fileName.match(/\.(?<apiName>.*)\.json/)
 
   mockApiConfigs.push({
-    url: result.groups.apiName,
+    url:  VITE_BASE_URL + result.groups.apiName,
     data: files[fileName],
   })
 }
