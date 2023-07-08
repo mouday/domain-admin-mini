@@ -1,4 +1,4 @@
-// import Mock from 'mockjs'
+import Mock from 'mockjs'
 
 // 导入所有文件
 const files = import.meta.globEager('./api/*.json')
@@ -10,7 +10,7 @@ for (let fileName in files) {
   const result = fileName.match(/\.(?<apiName>.*)\.json/)
 
   mockApiConfigs.push({
-    url:  result.groups.apiName,
+    url: result.groups.apiName,
     data: files[fileName],
   })
 }
@@ -19,11 +19,7 @@ for (let fileName in files) {
  * 生成数据
  */
 export function useMock() {
-  let map = {}
   for (let config of mockApiConfigs) {
-    console.log(config.url);
-    map[config.url] = config.data
-    // Mock.mock(config.url, config.data)
+    Mock.mock(config.url, config.data)
   }
-  return map
 }
