@@ -22,7 +22,6 @@ export default {
   methods: {
     getData() {
       if (!getToken()) {
-        
         uni.reLaunch({
           url: '/pages/login/login',
         })

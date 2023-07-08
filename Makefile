@@ -11,5 +11,6 @@ dep-dev:
 # 发布到测试环境
 .PHONY: dep-pro
 dep-pro:
-	npm version patch
-	npm run dep-pro
+	npm run build
+	mkdir -p ../domain-admin/domain_admin/public/m
+	cp -r ./dist/build/h5/* ../domain-admin/domain_admin/public/m

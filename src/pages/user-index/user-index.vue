@@ -16,7 +16,7 @@
         round
         width="60"
         height="60"
-        src="/static/user-avatar.gif"
+        src="static/user-avatar.gif"
       />
 
       <div class="userinfo__name">{{ userInfo.username }}</div>
