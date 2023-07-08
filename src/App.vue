@@ -4,6 +4,8 @@ import { getToken } from './utils/token-util/index.js'
 export default {
   onLaunch: function () {
     console.log('App Launch')
+    
+    
   },
 
   onShow: function () {
