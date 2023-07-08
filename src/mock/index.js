@@ -10,7 +10,7 @@ for (let fileName in files) {
   const result = fileName.match(/\.(?<apiName>.*)\.json/)
 
   mockApiConfigs.push({
-    url:  VITE_BASE_URL + result.groups.apiName,
+    url:  'https://mouday.github.io/domain-admin-mini' + result.groups.apiName,
     data: files[fileName],
   })
 }
@@ -20,6 +20,7 @@ for (let fileName in files) {
  */
 export function useMock() {
   for (let config of mockApiConfigs) {
+    console.log(config.url);
     Mock.mock(config.url, config.data)
   }
 }

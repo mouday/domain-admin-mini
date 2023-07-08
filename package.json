@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "npm run dev:h5",
+    "dev:preview": "npm run dev:h5 --mode preview-dev",
     "build": "npm run build:h5",
     "build:preview": "npm run build:h5 --mode preview-pro",
     "dev:app": "uni -p app",
