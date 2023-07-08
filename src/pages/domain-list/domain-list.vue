@@ -29,7 +29,13 @@
             :title="item.domain"
             :value="`${item.real_domain_expire_days} 天`"
             :label="item.comment || '-'"
-          />
+          >
+            <template #value>
+              <span :class="item.valueClass"
+                >{{ item.real_domain_expire_days }}天</span
+              >
+            </template>
+          </van-cell>
         </van-cell-group>
       </van-list>
     </van-pull-refresh>
@@ -41,6 +47,7 @@
 
 <script>
 import Tabbar from '@/components/Tabbar.vue'
+import { getDayClassName } from '@/components/common.js'
 
 export default {
   components: {
@@ -98,7 +105,10 @@ export default {
 
       try {
         const res = await this.$http.getDomainInfoList(params)
-        this.list = [...this.list, ...res.data.list]
+        this.list = [...this.list, ...res.data.list].map((item) => {
+          item.valueClass = getDayClassName(item.real_time_expire_days)
+          return item
+        })
         this.total = res.data.total
       } catch (e) {
         console.log(e)

@@ -14,7 +14,7 @@ export default {
       })
     }
   },
-  
+
   onHide: function () {
     console.log('App Hide')
   },
@@ -23,4 +23,5 @@ export default {
 
 <style>
 /*每个页面公共css */
+@import './style/index.css';
 </style>
