@@ -6,13 +6,19 @@
     <van-tabbar-item
       name="cert-list"
       icon="orders-o"
-      >证书列表</van-tabbar-item
+      >证书</van-tabbar-item
     >
 
     <van-tabbar-item
       name="domain-list"
       icon="notes-o"
-      >域名列表</van-tabbar-item
+      >域名</van-tabbar-item
+    >
+
+    <van-tabbar-item
+      name="user-index"
+      icon="user-o"
+      >个人中心</van-tabbar-item
     >
   </van-tabbar>
 </template>

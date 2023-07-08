@@ -11,20 +11,21 @@
       "path": "pages/cert-list/cert-list",
       "style": {
         "navigationBarTitleText": "证书列表",
-		"navigationStyle": "custom"
+		    "navigationStyle": "custom"
       }
     },
     {
       "path": "pages/domain-list/domain-list",
       "style": {
         "navigationBarTitleText": "域名列表",
-		"navigationStyle": "custom"
+		    "navigationStyle": "custom"
       }
     },
     {
       "path": "pages/user-index/user-index",
       "style": {
-        "navigationBarTitleText": "用户中心"
+        "navigationBarTitleText": "用户中心",
+        "navigationStyle": "custom"
       }
     },
     {

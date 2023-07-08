@@ -1,5 +1,8 @@
 <template>
-  <div class="">
+  <div
+    class=""
+    style="margin-top: 20px"
+  >
     <van-form @submit="onSubmit">
       <van-cell-group inset>
         <van-field
@@ -35,7 +38,9 @@
 
 <script>
 // created at 2023-07-07
-import { setToken } from '../../utils/token-util/index.js'
+import { getToken, setToken } from '../../utils/token-util/index.js'
+import { useUserStore } from '@/store/user-store.js'
+import { mapState, mapActions } from 'pinia'
 
 export default {
   name: 'login',
@@ -54,6 +59,10 @@ export default {
   computed: {},
 
   methods: {
+    ...mapActions(useUserStore, {
+      syncUserInfo: 'syncUserInfo',
+    }),
+
     async getData() {},
 
     onSubmit(form) {
@@ -72,7 +81,11 @@ export default {
       if (res.code == 0) {
         this.$msg.success('登录成功')
         setToken(res.data.token)
-        uni.navigateBack()
+        this.syncUserInfo()
+        
+        uni.reLaunch({
+          url: '/',
+        })
       }
     },
   },

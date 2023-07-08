@@ -1,24 +1,31 @@
 <script>
 import { getToken } from './utils/token-util/index.js'
+import { useUserStore } from '@/store/user-store.js'
+import { mapState, mapActions } from 'pinia'
 
 export default {
+  computed: {},
+
   onLaunch: function () {
     console.log('App Launch')
-    
-    
+
+    if (getToken()) {
+      this.syncUserInfo()
+    }
   },
 
   onShow: function () {
     console.log('App Show')
-    if (!getToken()) {
-      uni.navigateTo({
-        url: '/pages/login/login',
-      })
-    }
   },
 
   onHide: function () {
     console.log('App Hide')
+  },
+
+  methods: {
+    ...mapActions(useUserStore, {
+      syncUserInfo: 'syncUserInfo',
+    }),
   },
 }
 </script>

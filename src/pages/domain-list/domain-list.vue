@@ -42,16 +42,21 @@
 
     <!-- 底部导航栏 -->
     <Tabbar active="domain-list"></Tabbar>
+
+    <!-- 公共的底部 -->
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Tabbar from '@/components/Tabbar.vue'
 import { getDayClassName } from '@/components/common.js'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
     Tabbar,
+    Footer
   },
 
   data() {

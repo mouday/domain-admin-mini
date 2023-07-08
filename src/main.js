@@ -1,4 +1,6 @@
 import { createSSRApp } from 'vue'
+import * as Pinia from 'pinia'
+
 import App from './App.vue'
 import { Http } from './api/index.js'
 import SingleMessage from './utils/message-util.js'
@@ -26,6 +28,9 @@ if (VITE_MODE == 'preview') {
 
 export function createApp() {
   const app = createSSRApp(App)
+
+  // Pinia
+  app.use(Pinia.createPinia())
 
   app.config.globalProperties.$http = Http
   app.config.globalProperties.$msg = SingleMessage
